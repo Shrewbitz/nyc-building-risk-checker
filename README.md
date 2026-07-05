@@ -30,10 +30,12 @@ Optional:
 
 ## Run it
 
-From this folder:
+The examples use placeholders instead of real residential addresses.
+
+From this folder, replace `ADDRESS HERE` with the apartment building address:
 
 ```bash
-python3 check_nyc_building.py "43-15 52nd St, Woodside, NY 11377"
+python3 check_nyc_building.py "ADDRESS HERE"
 ```
 
 You can also pass building identifiers directly:
@@ -47,13 +49,13 @@ python3 check_nyc_building.py --bbl 4013210016 --bin 4625717
 Pretty human summary:
 
 ```bash
-python3 check_nyc_building.py "43-15 52nd St, Woodside, NY 11377" --human
+python3 check_nyc_building.py "ADDRESS HERE" --human
 ```
 
 Machine-readable JSON, useful for Codex/LLMs:
 
 ```bash
-python3 check_nyc_building.py "43-15 52nd St, Woodside, NY 11377" --json
+python3 check_nyc_building.py "ADDRESS HERE" --json
 ```
 
 `--json` is the default.
@@ -61,13 +63,13 @@ python3 check_nyc_building.py "43-15 52nd St, Woodside, NY 11377" --json
 If the risk result mentions DOB complaints, run the drill-down view:
 
 ```bash
-python3 check_nyc_building.py "43-15 52nd St, Woodside, NY 11377" --dob-details --human
+python3 check_nyc_building.py "ADDRESS HERE" --dob-details --human
 ```
 
 For JSON with recent DOB complaint rows:
 
 ```bash
-python3 check_nyc_building.py "43-15 52nd St, Woodside, NY 11377" --dob-details --json
+python3 check_nyc_building.py "ADDRESS HERE" --dob-details --json
 ```
 
 ## Suggested prompt for Codex
